@@ -1,0 +1,27 @@
+{
+  "name": "cookie-knight",
+  "version": "1.0.0",
+  "author": "Nick Böcker <kontakt@nick-hat-boecker.de> (https://nick-hat-boecker.de/)",
+  "scripts": {
+    "dev": "NODE_ENV=development webpack -w --config webpack.config.js",
+    "build": "NODE_ENV=production webpack --config webpack.config.js"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "autoprefixer": "^9.7.6",
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^8.1.0",
+    "copy-webpack-plugin": "^5.1.1",
+    "css-loader": "^3.5.3",
+    "cssnano": "^4.1.10",
+    "mini-css-extract-plugin": "^0.9.0",
+    "postcss-loader": "^3.0.0",
+    "sass": "^1.26.5",
+    "sass-loader": "^8.0.2",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  }
+}

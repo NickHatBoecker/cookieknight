@@ -1,0 +1,30 @@
+/**
+ * General settings
+ */
+$font-stack: Arial, sans-serif;
+$font-size: 16px;
+$spacing-unit: 6px;
+
+/**
+ * Viewports
+ */
+$viewport-xs: 800px;
+
+/**
+ * Colors
+ */
+$stratos: #010038;
+$bay-of-many: #293a80;
+$indigo: #537ec5;
+$carrot-orange: #f39422;
+
+$module-bg-color: $stratos;
+$text-color: #fff;
+$cookie-accepted-color: #ccc;
+
+/**
+ * Imports
+ */
+@import '_buttons';
+@import '_small-layer';
+@import '_detail-layer';

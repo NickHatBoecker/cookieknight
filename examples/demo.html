@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <title>CookieKnight Demo</title>
+
+    <link href="../dist/app.css" rel="stylesheet">
+    <style>
+    body {
+        background: #333;
+        height: 100vh;
+    }
+    </style>
+</head>
+<body>
+    <button class="cookieknight-show-more cookieknight__btn">Open dialog manually</button>
+    <script>
+        window.cookieKnightConfig = {
+            cookies: [
+                {
+                    id: 'google-analytics',
+                    title: 'Google Analytics',
+                    cookies: [
+                        { name: '_ga', path: '/', domain: 'localhost' },
+                        { name: '_gid', path: '/', domain: 'localhost' },
+                    ],
+                    description: 'Diese Cookies werden verwendet um Benutzer in Google Analytics zu unterscheiden.',
+                    purpose: 'Webanalyse',
+                    technicallyRequired: false,
+                },
+                {
+                    id: 'php-session',
+                    title: 'PHP Session',
+                    cookies: ['PHPSESSIONID'],
+                    description: 'Dieses Cookie ist zur Nutzerauthentifizierung an den diversen Datenbanken und zur Verwendung bei Formularen notwendig.',
+                    purpose: 'Session',
+                    technicallyRequired: true,
+                },
+                {
+                    id: 'demo1-js-alert',
+                    title: 'Demo1: Alert',
+                    cookies: ['demo1-js-alert'],
+                    description: 'Dieses Cookie speichert einen ausgedachten Wert.',
+                    purpose: 'Other',
+                    technicallyRequired: false,
+                },
+                {
+                    id: 'demo2-js-alert',
+                    title: 'Demo2: Alert',
+                    cookies: ['demo2-js-alert'],
+                    description: 'Dieses Cookie speichert einen ausgedachten Wert.',
+                    purpose: 'Other',
+                    technicallyRequired: false,
+                },
+            ],
+        }
+    </script>
+    <script src="../dist/app.js"></script>
+    <script data-src="demo.js" data-cookie="demo1-js-alert"></script>
+    <script type="text/plain" data-type="application/javascript" data-cookie="demo2-js-alert" defer>
+        alert('Demo2: This Javascript was loaded after accepting the cookie');
+        document.cookie = 'demo2-js-alert=2;path=/;'
+    </script>
+</body>
+</html>

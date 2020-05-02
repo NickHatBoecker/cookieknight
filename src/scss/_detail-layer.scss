@@ -1,0 +1,119 @@
+$detail-min-height: 70%;
+$detail-width: 40%;
+
+.cookieknight-detail {
+    border: 0;
+    color: $text-color;
+    line-height: 1.5;
+    box-sizing: border-box;
+    position: absolute;
+    min-height: $detail-min-height;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background: $module-bg-color;
+    padding: $spacing-unit*2 $spacing-unit*4;
+    font-family: $font-stack;
+    font-size: $font-size;
+    box-shadow: 0 $spacing-unit $spacing-unit rgba(0, 0, 0, 50%);
+
+    @media (min-width: $viewport-xs) {
+        position: fixed;
+        bottom: 0;
+        max-height: 90%;
+        width: $detail-width;
+    }
+
+    a {
+        color: $text-color;
+        text-decoration: underline;
+    }
+
+    &__wrapper {
+        height: 100%;
+    }
+}
+
+.cookieknight-detail__headline {
+    font-size: 32px;
+    margin-top: 0;
+    margin-bottom: $spacing-unit;
+    width: 90%;
+}
+
+.cookieknight-detail__footer {
+    background-color: $module-bg-color;
+    box-sizing: border-box;
+    margin-top: $spacing-unit*4;
+    text-align: center;
+    border-top: 1px solid $text-color;
+    padding-top: $spacing-unit*3;
+
+    @media (min-width: $viewport-xs) {
+        margin-left: auto;
+        margin-right: auto;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+    }
+}
+
+.cookieknight-detail__cookies {
+    @media (min-width: $viewport-xs) {
+        max-height: 70%;
+        overflow-y: scroll;
+    }
+}
+
+.cookieknight-detail__cookies .cookieknight-detail__cookie:last-child {
+    margin-bottom: $spacing-unit*12;
+}
+
+.cookieknight-detail__cookie {
+    box-sizing: border-box;
+    padding: $spacing-unit*2;
+    background-color: $indigo;
+    margin-top: $spacing-unit*4;
+    display: flex;
+
+    &:not(&__checked):hover {
+        background-color: darken($indigo, 20%);
+    }
+
+    &__headline {
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 0;
+        margin-bottom: $spacing-unit;
+        cursor: pointer;
+    }
+
+    &__purpose {
+        margin: 0;
+        font-size: 13px;
+    }
+
+    &__required {
+        font-style: italic;
+        font-size: 12px;
+        display: inline-block;
+        margin-left: $spacing-unit/3;
+    }
+
+    &__check {
+        margin-right: $spacing-unit;
+
+        input:focus {
+            outline: 4px solid rgba($stratos, 50%)
+        }
+    }
+
+    &__checked {
+        opacity: 60%;
+        background-color: $cookie-accepted-color;
+        color: $stratos;
+    }
+}

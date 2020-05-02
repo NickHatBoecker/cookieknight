@@ -1,0 +1,32 @@
+$button-default-bg-color: #ccc;
+$button-primary-bg-color: $bay-of-many;
+
+.cookieknight__btn {
+    box-sizing: border-box;
+    padding: $spacing-unit $spacing-unit*4;
+    margin-right: $spacing-unit;
+    min-height: $spacing-unit*8;
+    display: inline-block;
+    border: 0;
+    background-color: $button-default-bg-color;
+    font-size: $font-size;
+    cursor: pointer;
+    margin-bottom: $spacing-unit*2;
+
+    &:hover {
+        background-color: lighten($button-default-bg-color, 15%);
+    }
+
+    &--primary {
+        background-color: $button-primary-bg-color;
+        color: #fff;
+
+        &:hover {
+            background-color: lighten($button-primary-bg-color, 15%);
+        }
+    }
+
+    @media (max-width: $viewport-xs) {
+        width: 100%;
+    }
+}
